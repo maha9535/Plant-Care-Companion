@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🌱 Plant Care Companion</title>
+  <style>
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #222222;
+      --card-bg: #f2f2f2;
+      --accent-color: #2e8b57;
+    }
+
+    body.dark {
+      --bg-color: #1e1e1e;
+      --text-color: #f4f4f4;
+      --card-bg: #2a2a2a;
+      --accent-color: #90ee90;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    header {
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: var(--card-bg);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .theme-toggle {
+      cursor: pointer;
+      background-color: var(--accent-color);
+      color: #fff;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
+      font-size: 0.9rem;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    .plant-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+
+    .plant-card {
+      background-color: var(--card-bg);
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 280px;
+      transition: background-color 0.3s;
+    }
+
+    .plant-card img {
+      width: 100%;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+    }
+
+    .plant-card .info {
+      padding: 1rem;
+    }
+
+    .plant-card h2 {
+      margin-top: 0;
+      font-size: 1.2rem;
+      color: var(--accent-color);
+    }
+
+    .plant-card ul {
+      padding-left: 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: var(--text-color);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🌿 Plant Care Companion</h1>
+    <button class="theme-toggle" onclick="toggleTheme()">Switch Theme</button>
+  </header>
+
+  <div class="plant-container">
+    <div class="plant-card">
+      <img src="Assets/Lilium_longiflorum_(Easter_Lily).JPG" alt="Lily" />
+      <div class="info">
+        <h2>Lily</h2>
+        <ul>
+          <li>Light: Low to bright</li>
+          <li>Water: Weekly, keep moist</li>
+          <li>Fun Fact: Can bloom indoors</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="plant-card">
+      <img src="Assets/download.jfif" alt="Aloe Vera" />
+      <div class="info">
+        <h2>Aloe Vera</h2>
+        <ul>
+          <li>Light: Bright sunlight</li>
+          <li>Water: Every 2-3 weeks</li>
+          <li>Fun Fact: Used for healing burns</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="plant-card">
+      <img src="Assets/money plant.jfif" alt="Money Plant" />
+      <div class="info">
+        <h2>Money Plant</h2>
+        <ul>
+          <li>Light: Indirect</li>
+          <li>Water: Every 1-2 weeks</li>
+          <li>Fun Fact: Symbol of prosperity</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Plant Care Companion 🌱 — Keep your plants happy!
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+    }
+  </script>
+</body>
+</html>
